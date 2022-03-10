@@ -5,6 +5,8 @@ export default () => {
    browserSync.init({
       server: {
          baseDir: path.root
-      }
+      },
+      online: true,
+      tunnel: 'tester'
    });
 }

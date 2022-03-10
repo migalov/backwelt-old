@@ -9,7 +9,7 @@ import loadPlugins from "gulp-load-plugins";
 const sass = require('gulp-sass')(require('sass'));
 const gp = loadPlugins();
 
-const scss = () => {
+export default () => {
    return gulp.src(path.scss.src, {sourcemaps: app.isDev})
       .pipe(gp.plumber({
          errorHandler: gp.notify.onError(error => ({
@@ -23,10 +23,10 @@ const scss = () => {
       .pipe(gp.autoprefixer())
       .pipe(gp.shorthand())
       .pipe(gp.groupCssMediaQueries())
+      .pipe(gulp.dest(path.scss.dest, {sourcemaps: app.isDev}))
       .pipe(gp.size({
          title: "main.css"
       }))
-      .pipe(gulp.dest(path.scss.dest, {sourcemaps: app.isDev}))
       .pipe(gp.rename({ suffix: ".min" }))
       .pipe(gp.csso())
       .pipe(gulp.dest(path.scss.dest, {sourcemaps: app.isDev}))
@@ -34,5 +34,3 @@ const scss = () => {
          title: "main.min.css"
       }));
 }
-
-module.exports = scss;

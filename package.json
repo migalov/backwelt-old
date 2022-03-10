@@ -1,6 +1,6 @@
 {
   "name": "Backwelt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Borrowed assembly for creating web pages or letter templates",
   "main": "index.js",
   "author": "Michel Migalov",

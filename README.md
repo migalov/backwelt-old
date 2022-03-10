@@ -2,11 +2,10 @@
 
 ---
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 Backwelt - сборка Gulp, предназначенная для разработки веб-страниц и email-писем
+
+[Источник](https://youtu.be/qSZvGlIKGPg)
 
 ## Преимущества
 

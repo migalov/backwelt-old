@@ -20,5 +20,6 @@ export default () => {
       .pipe(gp.size({title: "JS"}))
       .pipe(gp.babel())
       .pipe(webpack(app.webpack))
-      .pipe(gulp.dest(path.js.dest, {sourcemaps: app.isDev}));
+      .pipe(gulp.dest(path.js.dest, {sourcemaps: app.isDev}))
+      .pipe(gp.size({title: "JS"}));
 }

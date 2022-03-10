@@ -24,7 +24,7 @@ export default () => {
       .pipe(gp.twig({
          data: app.twig.data
       }))
-      .pipe(gp.inlineCss(app.inlineCss))
+      .pipe(gulpif(app.twig.setting.email, gp.inlineCss(app.inlineCss)))
       .pipe(gulpif(!app.twig.setting.email, gp.webpHtml()))
       .pipe(gulpif(app.isProd, gp.htmlmin(app.htmlmin)))
       .pipe(gulpif(app.isProd && !app.twig.setting.email, gp.htmlmin(app.htmlmin)))
