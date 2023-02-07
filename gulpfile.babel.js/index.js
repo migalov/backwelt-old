@@ -13,6 +13,7 @@ import js from './tasks/js.js';
 import img from './tasks/img.js';
 import font from './tasks/font.js';
 import server from './tasks/server.js';
+import inlineStyle from './tasks/inlineStyle.js';
 
 // Observation
 const watcher = () => {
@@ -26,16 +27,18 @@ const watcher = () => {
 // Build
 const build = gulp.series(
    clear,
-   gulp.parallel(twig, scss, js, img, font)
+   gulp.parallel(twig, scss, js, img, font),
+   inlineStyle
 );
 
+// Development
 const dev = gulp.series(
    build,
    gulp.parallel(server, watcher)
 );
 
 // Public Tasks
-export { twig, scss, js, img, font, clear };
+export { twig, scss, js, img, font, clear, inlineStyle };
 
 // Assembly
 export default app.isProd ? build : dev;

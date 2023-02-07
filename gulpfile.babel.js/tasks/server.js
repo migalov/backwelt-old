@@ -7,6 +7,6 @@ export default () => {
          baseDir: path.root
       },
       online: true,
-      tunnel: 'tester'
+      open: "tunnel"
    });
 }

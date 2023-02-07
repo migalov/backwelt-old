@@ -11,9 +11,7 @@ export default {
    twig: {
       src: pathSrc + "/twig/**/*.twig",
       watch: pathSrc + "/twig/**/*.twig",
-      dest: pathDest,
-      email: pathSrc + "/twig/emails/**/*.twig",
-      pages: pathSrc + "/twig/pages/**/*.twig"
+      dest: pathDest
    },
    scss: {
       src: pathSrc + "/scss/*.{scss,sass}",

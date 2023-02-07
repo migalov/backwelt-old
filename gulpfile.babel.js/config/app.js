@@ -2,13 +2,13 @@ import news from "../data/news.json";
 
 const isProd = process.argv.includes("--production"),
       isDev = !isProd,
-      isDevEmail = process.argv.includes("email");
+      isEmail = process.argv.includes("--email");
 
 export default {
 
    isProd: isProd,
    isDev: isDev,
-   isDevEmail: isDevEmail,
+   isEmail: isEmail,
 
    htmlmin: {
       collapseWhitespace: isProd,
@@ -27,7 +27,7 @@ export default {
          ]
      },
      setting: {
-        email: isDevEmail ? "email" : ""
+        email: isEmail
      }
    },
 
